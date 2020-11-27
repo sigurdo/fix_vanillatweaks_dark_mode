@@ -35,6 +35,6 @@ for root, dirs, filenames in os.walk("original_lang"):
                 print("Generated", name)
 
 with open(os.path.join(RESOURCE_PACK_NAME, "pack.mcmeta"), "w") as file:
-    json.dump({"pack": {"pack_format": 6, "description": RESOURCE_PACK_DESCRIPTION}}, file)
+    json.dump({"pack": {"pack_format": 6, "description": RESOURCE_PACK_DESCRIPTION}}, file, indent=4, sort_keys=True)
 
 shutil.make_archive(RESOURCE_PACK_NAME, "zip", RESOURCE_PACK_NAME)
